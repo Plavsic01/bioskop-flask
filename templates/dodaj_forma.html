@@ -1,0 +1,38 @@
+{% extends "template.html" %}
+{% block title %}Dodaj Kartu{% endblock %}
+{% block link %}
+    {{ super() }}
+    <link rel="stylesheet" href="/static/form.css?version=5">
+{% endblock %}
+
+{% block body %}
+    <form action="{{ url_for('dodaj_kartu') }}" method="POST">
+        <div>
+            <label for="id">ID:</label>
+            <input type="number" name="id" id="id" min="1" required>
+        </div>
+        <div>
+            <label for="naziv_projekcije">Naziv Projekcije:</label>
+            <input type="text" name="naziv_projekcije" id="naziv_projekcije"required>
+        </div>
+        <div>
+            <label for="datum_vreme_projekcije">Datum i Vreme Projekcije:</label>
+            <input type="datetime-local" name="datum_vreme_projekcije" id="datum_vreme_projekcije"required>
+        </div>
+        <div>
+            <label for="datum_vreme_zavrsetka">Datum i Vreme Zavrsetka:</label>
+            <input type="datetime-local" name="datum_vreme_zavrsetka" id="datum_vreme_zavrsetka"required>
+        </div>
+        <div>
+            <label for="broj_sedista">Broj Sedista:</label>
+            <input type="number" name="broj_sedista" id="broj_sedista" required>
+        </div>
+        <div>
+            <button type="submit">Dodaj</button>
+        </div>
+    </form>
+{% endblock %}
+
+
+
+

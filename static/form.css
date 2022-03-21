@@ -1,0 +1,28 @@
+form{
+    width: 50%;
+    margin:0 auto;
+}
+
+div{
+    text-align: center;
+}
+
+label{
+    display:inline-block;
+    width: 110px;
+    text-align: right;
+
+}
+
+input{
+    margin:10px;
+    width: 200px;
+    padding:5px;
+}
+
+button{
+    margin-top: 10px;
+    text-align: center;
+    padding:5px 20px;
+    border-radius: 10px;
+}

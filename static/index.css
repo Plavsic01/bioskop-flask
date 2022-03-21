@@ -1,0 +1,26 @@
+table{
+    width: 70%;
+    border-collapse: collapse;
+    margin:0 auto;
+}
+
+td,th{
+    border:3px solid black;
+    text-align: center;
+    padding:8px;
+}
+
+#btn-div{
+    margin-top:25px;
+    text-align: center;
+}
+
+a{
+    padding:5px;background-color: gray;
+    text-decoration: none;color: white;border-radius: 7px;
+}
+
+a:hover{
+    color:white;
+    background-color: rgb(87, 73, 73);
+}

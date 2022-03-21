@@ -1,0 +1,43 @@
+{% extends "template.html" %}
+{% block title %}Pocetna Strana{% endblock %}
+{% block link %}
+    {{ super() }}
+    <link rel="stylesheet" href="/static/index.css">
+{% endblock %}
+
+{% block body %}
+<table>
+    <tr>
+        <th>ID</th>
+        <th>Naziv Projekcije</th>
+        <th>Datum i Vreme Projekcije</th>
+        <th>Datum i Vreme Zavrsetka</th>
+        <th>Broj Sedista</th>
+        <th></th>
+        <th></th>
+    </tr>
+    {% for karta in karte %}
+    <tr>
+        <td>{{karta['id']}}</td>
+        <td>{{karta['naziv_projekcije']}}</td>
+        <td>{{karta['datum_vreme_projekcije']}}</td>
+        <td>{{karta['datum_vreme_zavrsetka']}}</td>
+        <td>{{karta['broj_sedista']}}</td>
+        <td><a href="{{ url_for('obrisi',id=loop.index) }}">Obrisi</a></td>
+        <td><a href="{{ url_for('izmeni',id=loop.index) }}">Izmeni</a></td>
+    </tr>
+    {% endfor %}
+</table>
+
+<div id="btn-div">
+    <a href="{{ url_for('dodaj_kartu') }}">Dodaj Kartu</a>
+    </div>
+
+{% endblock %}
+
+
+<!-- <td><a href="{{ url_for('prikazi',id=loop.index) }}">Prikazi</a></td>
+        <td><a href="{{ url_for('izmeni',id=loop.index) }}">Izmeni</a></td>
+        <td><a href="{{ url_for('obrisi',id=loop.index) }}">Obrisi</a></td> -->
+
+
